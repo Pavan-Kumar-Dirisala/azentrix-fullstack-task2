@@ -3,7 +3,6 @@ from typing import List
 
 class ResearchPlanner(BaseModel):
     goal: str = Field(description="Main research objective derived from the user's query")
-
     subtopics: List[str] = Field(description="List of key subtopics that should be researched")
 
 class SearchResult(BaseModel):
@@ -16,6 +15,7 @@ class SearchResult(BaseModel):
 class TopicSummary(BaseModel):
     topic: str = Field(description="Research topic being summarized")
     summary: str = Field(description="Concise summary of findings for the topic")
+    sources: List[str] = Field(description="List of source URLs used to create the summary")
 
 
 class ReviewResult(BaseModel):
@@ -26,7 +26,8 @@ class ReviewResult(BaseModel):
 class ResearchReport(BaseModel):
     title: str = Field(description="Title of the research report")
     executive_summary: str = Field(description="Brief summary of the entire research report")
-    report: str = Field(description="Complete research report containing introduction, findings, analysis, conclusion and references")
+    report: str = Field(description="Complete research report containing introduction, findings, analysis and conclusion")
+    references: List[str] = Field(description="List of source URLs used in the report")
 
 class ValidatedSearchResult(BaseModel):
     topic: str = Field(description="Research subtopic associated with the search result")
