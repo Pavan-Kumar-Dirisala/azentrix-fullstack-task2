@@ -5,6 +5,7 @@ def searching_agent(plan : ResearchPlanner):
     search_results=[]
 
     for topic in plan.subtopics:
+        print(f"Searching for: {topic}")
         search_output = search_web(topic)
         for result in search_output[:3]:
             search_results.append(
