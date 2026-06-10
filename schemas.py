@@ -27,3 +27,11 @@ class ResearchReport(BaseModel):
     title: str = Field(description="Title of the research report")
     executive_summary: str = Field(description="Brief summary of the entire research report")
     report: str = Field(description="Complete research report containing introduction, findings, analysis, conclusion and references")
+
+class ValidatedSearchResult(BaseModel):
+    topic: str = Field(description="Research subtopic associated with the search result")
+    title: str = Field(description="Title of the source or article")
+    source: str = Field(description="Source URL or website name")
+    content: str = Field(description="Validated content from the source")
+    is_valid: bool = Field(description="Whether the search result passed validation")
+    validation_reason: str = Field(description="Reason for accepting or rejecting the source")
