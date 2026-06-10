@@ -7,9 +7,11 @@ class ResearchPlanner(BaseModel):
     subtopics: List[str] = Field(description="List of key subtopics that should be researched")
 
 class SearchResult(BaseModel):
+    topic: str = Field(description="Research subtopic for which the search result was retrieved")
     title : str = Field(description="Title of the source or article")
     source : str = Field(description = "Source URL or website name")
     content : str = Field(description = "Relevant extracted content from the source")
+
 
 class TopicSummary(BaseModel):
     topic: str = Field(description="Research topic being summarized")
