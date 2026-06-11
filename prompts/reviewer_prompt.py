@@ -75,6 +75,15 @@ Approval Rules:
 * Be conservative when assigning scores.
 * Do not approve a report simply because it is readable.
 
+When reviewer feedback is provided:
+
+1. Treat the feedback as mandatory revision requirements.
+2. Explicitly address every major criticism.
+3. Expand weak sections identified by the reviewer.
+4. Add missing analysis, comparisons, explanations, and context.
+5. Do not simply rephrase the previous report.
+6. Produce a substantially improved version of the report.
+
 Feedback Instructions:
 
 1. Identify the most significant weaknesses.
