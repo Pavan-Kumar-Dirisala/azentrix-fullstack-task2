@@ -12,41 +12,19 @@ Single-prompt LLM calls often struggle with complex multi-step research tasks.
 
 This project solves that problem by using a team of specialized AI agents that collaborate through an orchestrated workflow to:
 
-- Plan research
-- Search for information
-- Validate sources
-- Summarize findings
-- Write reports
-- Review report quality
-- Rewrite reports based on reviewer feedback
+* Plan research
+* Search for information
+* Validate sources
+* Summarize findings
+* Write reports
+* Review report quality
+* Rewrite reports based on reviewer feedback
 
 ---
 
 ## 🏗️ System Architecture
 
-![Architecture Diagram](images/archetecture.jpg)
-
-### Workflow
-
-User Query
-↓
-Planner Agent
-↓
-Search Agent
-↓
-Validation Agent
-↓
-Parallel Summariser Agent
-↓
-Writer Agent
-↓
-Reviewer Agent
-↓
-Approved?
-
-YES → Final Report
-
-NO → Rewrite Loop → Writer Agent → Reviewer Agent
+![Architecture Diagram](images/architecture.jpg)
 
 ---
 
@@ -60,12 +38,12 @@ Breaks the user's query into focused research subtopics.
 
 **Input**
 
-- User query
+* User query
 
 **Output**
 
-- Research goal
-- Search-friendly subtopics
+* Research goal
+* Search-friendly subtopics
 
 ---
 
@@ -73,17 +51,17 @@ Breaks the user's query into focused research subtopics.
 
 **Role**
 
-Collects information from the web using DuckDuckGo.
+Collects information from the web using DuckDuckGo Search.
 
 **Features**
 
-- Domain filtering
-- Source prioritization
-- Multi-topic research
+* Domain filtering
+* Source prioritization
+* Multi-topic research
 
 **Output**
 
-- Search results
+* Search results
 
 ---
 
@@ -95,13 +73,13 @@ Filters low-quality or irrelevant search results.
 
 **Features**
 
-- Rule-based validation
-- Keyword relevance checking
-- Content quality filtering
+* Rule-based validation
+* Keyword relevance checking
+* Content quality filtering
 
 **Output**
 
-- Validated search results
+* Validated search results
 
 ---
 
@@ -113,13 +91,13 @@ Creates concise summaries for each research topic.
 
 **Features**
 
-- Parallel execution
-- Topic-level summarization
-- Source preservation
+* Parallel execution
+* Topic-level summarization
+* Source preservation
 
 **Output**
 
-- Topic summaries
+* Topic summaries
 
 ---
 
@@ -131,10 +109,10 @@ Generates a professional research report using validated summaries.
 
 **Output**
 
-- Title
-- Executive Summary
-- Full Report
-- References
+* Title
+* Executive Summary
+* Full Report
+* References
 
 ---
 
@@ -142,22 +120,22 @@ Generates a professional research report using validated summaries.
 
 **Role**
 
-Evaluates report quality.
+Evaluates report quality and provides feedback.
 
 **Evaluation Criteria**
 
-- Completeness
-- Accuracy
-- Depth
-- Structure
-- Clarity
-- References
+* Completeness
+* Accuracy
+* Depth of Analysis
+* Structure
+* Clarity
+* References
 
 **Output**
 
-- Score
-- Approval Status
-- Feedback
+* Score
+* Approval Status
+* Feedback
 
 ---
 
@@ -168,7 +146,7 @@ If the reviewer rejects the report:
 1. Reviewer feedback is sent back to the Writer Agent.
 2. The Writer Agent revises the report.
 3. The Reviewer Agent evaluates the revised report.
-4. Process repeats until approval or maximum rewrite attempts are reached.
+4. The process repeats until approval or the maximum rewrite attempts are reached.
 
 This avoids expensive re-search and re-summarization while improving report quality.
 
@@ -178,27 +156,27 @@ This avoids expensive re-search and re-summarization while improving report qual
 
 ### Frameworks
 
-- LangGraph
-- LangChain
-- Streamlit
+* LangGraph
+* LangChain
+* Streamlit
 
 ### LLMs
 
-- GPT-5
-- GPT-5 Mini
+* GPT-5
+* GPT-5 Mini
 
 ### Search
 
-- DuckDuckGo Search
+* DuckDuckGo Search
 
 ### Validation
 
-- Rule-Based Validation Engine
+* Rule-Based Validation Engine
 
 ### Output
 
-- PDF Export
-- JSON Export
+* PDF Export
+* JSON Export
 
 ---
 
@@ -229,6 +207,18 @@ Task-2/
 ├── tools/
 │   └── search_tool.py
 │
+├── images/
+│   ├── architecture.jpg
+│   ├── llm_report.png
+│   ├── llm_review.png
+│   ├── llm_timeline.png
+│   ├── ai_software_report.png
+│   ├── ai_software_review.png
+│   ├── ai_software_timeline.png
+│   ├── quantum_report.png
+│   ├── quantum_review.png
+│   └── quantum_timeline.png
+│
 ├── main.py
 ├── schemas.py
 ├── DESIGN.md
@@ -243,7 +233,7 @@ Task-2/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/azentrix-fullstack-task2.git
+git clone https://github.com/Pavan-Kumar-Dirisala/azentrix-fullstack-task2.git
 
 cd azentrix-fullstack-task2
 ```
@@ -278,10 +268,10 @@ pip install -r requirements.txt
 
 ## 🔑 Environment Variables
 
-Create a `.env` file.
+Create a `.env` file:
 
 ```env
-OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY=your_openai_api_key
 ```
 
 ---
@@ -294,79 +284,121 @@ streamlit run main.py
 
 ---
 
-## 📊 Example Queries
+## 📸 Example Runs
 
-### Example 1
-
-```text
-Impact of Trump on F1 Visa Policies
-```
-
-### Example 2
-
-```text
-Will AI Replace Software Engineers by 2035?
-```
-
-### Example 3
-
-```text
-Future of Renewable Energy Technologies
-```
+The system was tested across multiple research domains to validate the effectiveness of the multi-agent workflow.
 
 ---
 
-## 📸 Screenshots
+### Example 1 — Recent Advancements in Large Language Models
 
-### Dashboard
+**Input**
 
-(Add screenshot)
+```text
+Recent advancements in Large Language Models (LLMs)
+```
 
-### Workflow Execution
+#### Research Report
 
-(Add screenshot)
+![LLM Report](images/llm_report.png)
 
-### Generated Report
+#### Quality Review
 
-(Add screenshot)
+![LLM Review](images/llm_review.png)
 
-### Review Results
+#### Execution Timeline
 
-(Add screenshot)
+![LLM Timeline](images/llm_timeline.png)
+
+---
+
+### Example 2 — Impact of AI on Software Development and Engineering
+
+**Input**
+
+```text
+What is the impact of AI on software development and software engineering?
+```
+
+#### Research Report
+
+![AI Software Report](images/ai_software_report.png)
+
+#### Quality Review
+
+![AI Software Review](images/ai_software_review.png)
+
+#### Execution Timeline
+
+![AI Software Timeline](images/ai_software_timeline.png)
+
+---
+
+### Example 3 — Present and Future Applications of Quantum Computing
+
+**Input**
+
+```text
+What are the current and future applications of quantum computing?
+```
+
+#### Research Report
+
+![Quantum Report](images/quantum_report.png)
+
+#### Quality Review
+
+![Quantum Review](images/quantum_review.png)
+
+#### Execution Timeline
+
+![Quantum Timeline](images/quantum_timeline.png)
 
 ---
 
 ## 📄 Output Formats
 
-The system can export:
+The system supports:
 
-- PDF Research Report
-- JSON Research Data
+* PDF Report Export
+* JSON Export
+* Interactive Streamlit Dashboard
 
 ---
 
 ## 🔮 Future Improvements
 
-- Academic database integration
-- Citation generation
-- Multi-source search engines
-- Human-in-the-loop review
-- Vector database memory
-- Agent performance analytics
+* Academic database integration
+* Citation generation
+* Multiple search providers
+* Human-in-the-loop review
+* Vector database memory
+* Agent performance analytics
+* Automated source credibility scoring
+* Research gap detection and auto re-search
 
 ---
 
 ## 🎥 Demo Video
 
-Loom Demo:
+**Loom Demo:**
+(Add Loom Video Link Here)
 
-(Add Loom Link)
+---
+
+## 📝 DESIGN DOCUMENT
+
+A detailed explanation of the system architecture, design decisions, challenges, trade-offs, and future improvements is available in:
+
+```text
+DESIGN.md
+```
 
 ---
 
 ## 👨‍💻 Author
 
-Pavan Kumar Dirisala
+**Pavan Kumar Dirisala**
 
 Generative AI Internship Assessment
 Azentrix Digital Services
