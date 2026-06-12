@@ -394,3 +394,6 @@ DESIGN.md
 
 **Pavan Kumar Dirisala**
 
+* **GitHub:** [@Pavan-Kumar-Dirisala](https://github.com/Pavan-Kumar-Dirisala)
+
+* **LinkedIn:** [Pavan Kumar Dirisala](https://linkedin.com/in/your-profile)
