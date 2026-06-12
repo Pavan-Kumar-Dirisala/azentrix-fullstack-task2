@@ -1,5 +1,3 @@
-# DESIGN.md
-
 # Multi-Agent Research Assistant
 
 ## 1. Project Overview
