@@ -342,15 +342,16 @@ What are the current and future applications of quantum computing?
 
 #### Research Report
 
-![Quantum Report](images/quantum_report.png)
+![Quantum Report](images/quantam_report.jpg)
+![Quantum Report](images/quantam_report_2.jpg)
 
 #### Quality Review
 
-![Quantum Review](images/quantum_review.png)
+![Quantum Review](images/quantum_review.jpg)
 
 #### Execution Timeline
 
-![Quantum Timeline](images/quantum_timeline.png)
+![Quantum Timeline](images/quantum_timeline.jpg)
 
 ---
 
