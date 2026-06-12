@@ -54,7 +54,7 @@ NO → Rewrite Loop → Writer Agent → Reviewer Agent
 
 Architecture Diagram:
 
-![Architecture](images/architecture.jpg)
+![Architecture](images/archetecture.jpg)
 
 ---
 
