@@ -347,11 +347,11 @@ What are the current and future applications of quantum computing?
 
 #### Quality Review
 
-![Quantum Review](images/quantum_review.jpg)
+![Quantum Review](images/quantam_review.jpg)
 
 #### Execution Timeline
 
-![Quantum Timeline](images/quantum_timeline.jpg)
+![Quantum Timeline](images/quantam_timeline.jpg)
 
 ---
 
