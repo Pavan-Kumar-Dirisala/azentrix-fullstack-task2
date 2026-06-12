@@ -319,15 +319,16 @@ What is the impact of AI on software development and software engineering?
 
 #### Research Report
 
-![AI Software Report](images/ai_software_report.png)
+![AI Software Report](images/ai_software_report.jpg)
+![AI Software Report](images/ai_software_report-2.jpg)
 
 #### Quality Review
 
-![AI Software Review](images/ai_software_review.png)
+![AI Software Review](images/ai_software_review.jpg)
 
 #### Execution Timeline
 
-![AI Software Timeline](images/ai_software_timeline.png)
+![AI Software Timeline](images/ai_software_timeline.jpg)
 
 ---
 
