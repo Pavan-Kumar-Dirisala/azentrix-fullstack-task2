@@ -27,5 +27,8 @@ def validation_agent(search_results : List[SearchResult]):
         )
         if validation.is_valid:
             validated_results.append(validation)
+    print(
+    f"Validated: {len(validated_results)} / {len(search_results)}"
+)
     return validated_results
             

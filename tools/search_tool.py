@@ -1,9 +1,11 @@
-from langchain_community.tools import DuckDuckGoSearchResults
+from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
 
+search = DuckDuckGoSearchAPIWrapper(
+    max_results=10
+)
 
-web_search = DuckDuckGoSearchResults(output_format = "list")
-
-def search_web(query : str):
-    return web_search.invoke(query)
-    
-
+def search_web(query: str):
+    return search.results(
+        query,
+        max_results=10
+    )
