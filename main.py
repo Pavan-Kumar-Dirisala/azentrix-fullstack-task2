@@ -1069,7 +1069,8 @@ def render_results(page):
                 <div class="score-tile-box">
                     <div style="display:flex;align-items:baseline;gap:0.2rem">
                         <span class="score-big">{score_display}</span>
-                        <span class="score-denom"> / 10</span>
+                        <span class="score-denom"> / 100
+                        </span>
                     </div>
                     <div class="score-label">Overall Score</div>
                 </div>""", unsafe_allow_html=True)
@@ -1107,7 +1108,7 @@ def render_results(page):
                 if isinstance(criteria, dict):
                     cols = st.columns(len(criteria))
                     for i, (k, v) in enumerate(criteria.items()):
-                        cols[i].metric(k.replace("_", " ").title(), f"{v}/10")
+                        cols[i].metric(k.replace("_", " ").title(), f"{v}/100")
                 else:
                     st.write(criteria)
                 # st.markdown("</div>", unsafe_allow_html=True)
