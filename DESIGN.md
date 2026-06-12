@@ -405,52 +405,69 @@ Data flow remains transparent throughout the workflow.
 
 # 7. Streamlit Dashboard Design
 
-A Streamlit interface was developed to provide an interactive user experience.
+A custom Streamlit dashboard was developed to provide an interactive interface for users and real-time visibility into the execution of the multi-agent workflow.
 
-## Features
+The dashboard transforms the system from a simple backend workflow into a complete research platform by allowing users to:
 
-### Query Submission
+- Submit research queries
+- Monitor agent execution in real time
+- View workflow telemetry and performance metrics
+- Track review scores and approval status
+- Navigate between report, review, and execution views
+- Export reports as PDF and JSON
 
-Users can submit research questions through a simple interface.
+## Dashboard Interface
 
-### Workflow Monitoring
+![Dashboard](images/dashboard.jpg)
 
-Displays:
+### Dashboard Components
 
-* Active node execution
-* Processing status
-* Runtime information
+#### Research Query Panel
 
-### Report Viewer
+Allows users to submit research questions that initiate the LangGraph workflow.
 
-Displays:
+#### Live Execution Monitor
 
-* Title
-* Executive Summary
-* Full Report
-* References
+Displays real-time execution logs for each agent in the workflow, enabling transparency and easier debugging.
 
-### Quality Review Panel
+#### Workflow Metrics
 
-Displays:
+The dashboard tracks:
 
-* Review score
-* Approval status
-* Reviewer feedback
+- Total Runtime
+- Nodes Executed
+- Revision Passes
+- Review Scores
+- Approval Status
 
-### Export Features
+#### Navigation Panel
 
-Supports:
+Provides access to:
 
-* PDF Export
-* JSON Export
+- Research Report
+- Quality Review
+- Execution Timeline
 
-### Execution Timeline
+#### Export Features
 
-Provides visibility into workflow execution and performance.
+Users can download:
 
----
+- PDF Reports
+- JSON Workflow Results
 
+### Design Rationale
+
+Many AI applications operate as black-box systems where users cannot observe intermediate reasoning or workflow progress.
+
+The dashboard was designed to improve:
+
+- Transparency
+- Explainability
+- User Experience
+- Workflow Monitoring
+- Debugging Capability
+
+By exposing agent execution details and performance metrics, users gain visibility into how the final report is generated.
 # 8. Performance Optimizations
 
 Several optimizations were introduced during development.
