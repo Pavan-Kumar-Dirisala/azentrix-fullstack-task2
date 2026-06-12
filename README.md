@@ -1,6 +1,7 @@
 # 🔬 Multi-Agent Research Assistant
 
-A LangGraph-powered Multi-Agent Research System that automatically performs deep research, validates sources, generates comprehensive reports, reviews report quality, and iteratively improves outputs through a feedback-driven rewrite loop.
+This project is a LangGraph-powered Multi-Agent Research Assistant that transforms a user query into a comprehensive research report through a collaborative workflow of specialized AI agents. The system performs research planning, web search, source validation, parallel summarization, report generation, and quality review, with an automated rewrite loop that continuously improves report quality based on reviewer feedback.
+
 ---
 
 ## 📌 Problem Statement
@@ -378,12 +379,6 @@ The system supports:
 
 ---
 
-## 🎥 Demo Video
-
-**Loom Demo:**
-(Add Loom Video Link Here)
-
----
 
 ## 📝 DESIGN DOCUMENT
 
@@ -399,5 +394,3 @@ DESIGN.md
 
 **Pavan Kumar Dirisala**
 
-Generative AI Internship Assessment
-Azentrix Digital Services
