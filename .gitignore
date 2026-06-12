@@ -6,4 +6,3 @@ venv/
 .idea/
 .vscode/
 test.py
-main.py

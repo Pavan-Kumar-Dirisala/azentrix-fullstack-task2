@@ -12,7 +12,7 @@ llm_mini = ChatOpenAI(
     temperature=0
 )
 llm = ChatOpenAI(
-    model = "gpt-5",
+    model = "gpt-5-mini",
     temperature = 0
 )
 # print("LLM initialized successfully")

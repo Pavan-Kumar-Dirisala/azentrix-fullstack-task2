@@ -6,3 +6,5 @@ duckduckgo-search
 ddgs
 pydantic
 python-dotenv
+streamlit
+reportlab
