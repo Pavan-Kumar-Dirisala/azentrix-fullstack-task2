@@ -1,34 +1,61 @@
-from prompts.validation_prompt import VALIDATION_PROMPT
-from llm_initializer import llm
-from schemas import ValidatedSearchResult , SearchResult
+from schemas import ValidatedSearchResult, SearchResult
 from typing import List
-structured_output = llm.with_structured_output(ValidatedSearchResult)
+import re
 
-def validation_agent(search_results : List[SearchResult]):
+def extract_keywords(text:str):
+    words=re.findall(r"\b[a-zA-Z]{3,}\b",text.lower())
+
+    stopwords={
+        "the","and","for","with","that",
+        "this","from","into","about",
+        "what","when","where","which",
+        "their","have","will","would"
+    }
+
+    return {
+        word
+        for word in words
+        if word not in stopwords
+    }
+
+def validation_agent(search_results:List[SearchResult]):
+
     validated_results=[]
 
     for result in search_results:
-        validation = structured_output.invoke(
-            f"""
-            {VALIDATION_PROMPT}
 
-            Topic:
-            {result.topic}
+        if not result.content:
+            continue
 
-            Title:
-            {result.title}
+        if len(result.content.strip())<80:
+            continue
 
-            Source:
-            {result.source}
-
-            Content:
-            {result.content}
-            """
+        topic_keywords=extract_keywords(
+            result.topic
         )
-        if validation.is_valid:
-            validated_results.append(validation)
+
+        content_keywords=extract_keywords(
+            result.title+" "+result.content
+        )
+
+        overlap=topic_keywords & content_keywords
+
+        if len(overlap)<1:
+            continue
+
+        validated_results.append(
+            ValidatedSearchResult(
+                topic=result.topic,
+                title=result.title,
+                source=result.source,
+                content=result.content,
+                is_valid=True,
+                validation_reason=f"Keyword overlap: {', '.join(overlap)}"
+            )
+        )
+
     print(
-    f"Validated: {len(validated_results)} / {len(search_results)}"
-)
+        f"Validated: {len(validated_results)} / {len(search_results)}"
+    )
+
     return validated_results
-            
