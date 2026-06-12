@@ -24,7 +24,7 @@ This project solves that problem by using a team of specialized AI agents that c
 
 ## 🏗️ System Architecture
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](images/archetecture.jpg)
 
 ### Workflow
 
