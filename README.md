@@ -1,9 +1,6 @@
 # 🔬 Multi-Agent Research Assistant
 
 A LangGraph-powered Multi-Agent Research System that automatically performs deep research, validates sources, generates comprehensive reports, reviews report quality, and iteratively improves outputs through a feedback-driven rewrite loop.
-
-Built as part of the Azentrix Digital Services Generative AI Internship Assessment (Task 2).
-
 ---
 
 ## 📌 Problem Statement
@@ -24,7 +21,7 @@ This project solves that problem by using a team of specialized AI agents that c
 
 ## 🏗️ System Architecture
 
-![Architecture Diagram](images/archetecture.jpg)
+![Architecture Diagram](/images/archetecture.jpg)
 
 ---
 
@@ -300,15 +297,15 @@ Recent advancements in Large Language Models (LLMs)
 
 #### Research Report
 
-![LLM Report](images/llm_report.png)
-
+![LLM Report](images/llm_report-1.jpg)
+![LLM Report](images/llmreport-2.jpg)
 #### Quality Review
 
-![LLM Review](images/llm_review.png)
+![LLM Review](images/llm_review.jpg)
 
 #### Execution Timeline
 
-![LLM Timeline](images/llm_timeline.png)
+![LLM Timeline](images/llm_timeline.jpg)
 
 ---
 
